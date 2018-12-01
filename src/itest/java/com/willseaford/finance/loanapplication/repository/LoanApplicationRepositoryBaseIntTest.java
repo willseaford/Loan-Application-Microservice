@@ -9,6 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DataJpaTest
@@ -17,6 +20,9 @@ public abstract class LoanApplicationRepositoryBaseIntTest {
 
     @Autowired
     private LoanApplicationRepository sut;
+
+    @PersistenceContext
+    private EntityManager entityManager;
 
 
     @Test

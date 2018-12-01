@@ -1,0 +1,13 @@
+version: "3.5"
+services:
+  db:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: sa
+      MYSQL_PASSWORD: sa
+      MYSQL_DATABASE: loanapplication
+      TZ: UTC
+    hostname: dataconnect
+    ports:
+      - 3306:3307
+    restart: always
